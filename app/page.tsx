@@ -133,9 +133,9 @@ function CourseList() {
 function TestimonialCarousel() {
   return (
     <div className="flex overflow-x-auto gap-4">
-      <div className="min-w-[250px] bg-white p-4 rounded shadow">"Sangat membantu!" - Lina</div>
-      <div className="min-w-[250px] bg-white p-4 rounded shadow">"Instruktur luar biasa!" - Dedi</div>
-      <div className="min-w-[250px] bg-white p-4 rounded shadow">"Platform terbaik!" - Sari</div>
+      <div className="min-w-[250px] bg-white p-4 rounded shadow">&ldquo;Sangat membantu!&rdquo; - Lina</div>
+      <div className="min-w-[250px] bg-white p-4 rounded shadow">&ldquo;Instruktur luar biasa!&rdquo; - Dedi</div>
+      <div className="min-w-[250px] bg-white p-4 rounded shadow">&ldquo;Platform terbaik!&rdquo; - Sari</div>
     </div>
   );
 }
