@@ -11,7 +11,6 @@ export default function WebsiteStructure() {
           <button className="mt-6 bg-white text-blue-600 font-semibold py-2 px-4 rounded-xl">Lihat Kursus</button>
         </div>
         <div className="grid md:grid-cols-3 gap-6 px-6">
-          {/* Sorotan kursus */}
           <CourseHighlight />
         </div>
       </section>
@@ -53,15 +52,17 @@ export default function WebsiteStructure() {
       </section>
 
       {/* Fitur Teknis dan Dashboard */}
-      <UserAuth />
-      <StudentDashboard />
-      <InteractivePreview />
-      <PaymentIntegration />
-      <LiveChatSupport />
-      <CourseReview />
-      <InstructorProfile />
-      <SearchFilter />
-      <CalendarIntegration />
+      <section className="px-6">
+        <UserAuth />
+        <StudentDashboard />
+        <InteractivePreview />
+        <PaymentIntegration />
+        <LiveChatSupport />
+        <CourseReview />
+        <InstructorProfile />
+        <SearchFilter />
+        <CalendarIntegration />
+      </section>
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white px-6 py-8 text-center">
@@ -71,67 +72,127 @@ export default function WebsiteStructure() {
   );
 }
 
-// Komponen dummy untuk placeholder
 function CourseHighlight() {
-  return <div className="p-4 bg-white rounded-xl shadow">Kursus Unggulan</div>;
+  return (
+    <>
+      <div className="p-4 bg-white rounded-xl shadow">
+        <h3 className="font-semibold text-lg mb-2">Manajemen Proyek</h3>
+        <p>Kuasai keterampilan manajemen proyek dari dasar hingga lanjutan.</p>
+      </div>
+      <div className="p-4 bg-white rounded-xl shadow">
+        <h3 className="font-semibold text-lg mb-2">Desain UI/UX</h3>
+        <p>Pelajari prinsip desain modern untuk aplikasi digital.</p>
+      </div>
+      <div className="p-4 bg-white rounded-xl shadow">
+        <h3 className="font-semibold text-lg mb-2">Pengembangan Web</h3>
+        <p>Dari HTML hingga React, bangun aplikasi web profesional.</p>
+      </div>
+    </>
+  );
 }
 
 function TeamShowcase() {
-  return <div className="mt-4">[Tampilkan Profil Tim di sini]</div>;
+  return (
+    <div className="grid md:grid-cols-3 gap-6">
+      <div className="bg-white p-4 rounded shadow">
+        <h4 className="font-bold">Ayu Hartono</h4>
+        <p>CEO & Founder</p>
+      </div>
+      <div className="bg-white p-4 rounded shadow">
+        <h4 className="font-bold">Budi Santosa</h4>
+        <p>Kepala Kurikulum</p>
+      </div>
+      <div className="bg-white p-4 rounded shadow">
+        <h4 className="font-bold">Citra Maulani</h4>
+        <p>Desainer UI/UX</p>
+      </div>
+    </div>
+  );
 }
 
 function CourseFilter() {
-  return <div className="mb-4">[Filter Kursus Berdasarkan Topik, Level, Durasi]</div>;
+  return (
+    <div className="flex flex-wrap gap-2 mb-6">
+      <button className="bg-blue-100 text-blue-800 py-1 px-3 rounded-full">Topik</button>
+      <button className="bg-blue-100 text-blue-800 py-1 px-3 rounded-full">Level</button>
+      <button className="bg-blue-100 text-blue-800 py-1 px-3 rounded-full">Durasi</button>
+    </div>
+  );
 }
 
 function CourseList() {
-  return <div>[Daftar Kursus]</div>;
+  return (
+    <div className="grid md:grid-cols-3 gap-6">
+      <div className="bg-white p-4 rounded shadow">Kursus 1</div>
+      <div className="bg-white p-4 rounded shadow">Kursus 2</div>
+      <div className="bg-white p-4 rounded shadow">Kursus 3</div>
+    </div>
+  );
 }
 
 function TestimonialCarousel() {
-  return <div>[Carousel Testimoni]</div>;
+  return (
+    <div className="flex overflow-x-auto gap-4">
+      <div className="min-w-[250px] bg-white p-4 rounded shadow">"Sangat membantu!" - Lina</div>
+      <div className="min-w-[250px] bg-white p-4 rounded shadow">"Instruktur luar biasa!" - Dedi</div>
+      <div className="min-w-[250px] bg-white p-4 rounded shadow">"Platform terbaik!" - Sari</div>
+    </div>
+  );
 }
 
 function BlogList() {
-  return <div>[Daftar Artikel dan Sumber Daya]</div>;
+  return (
+    <div className="grid md:grid-cols-3 gap-6">
+      <div className="bg-white p-4 rounded shadow">Artikel 1</div>
+      <div className="bg-white p-4 rounded shadow">Artikel 2</div>
+      <div className="bg-white p-4 rounded shadow">Artikel 3</div>
+    </div>
+  );
 }
 
 function ContactForm() {
-  return <div>[Form Kontak Pengguna]</div>;
+  return (
+    <form className="space-y-4 max-w-xl">
+      <input className="w-full border rounded p-2" placeholder="Nama" />
+      <input className="w-full border rounded p-2" placeholder="Email" />
+      <textarea className="w-full border rounded p-2" placeholder="Pesan" rows={4} />
+      <button className="bg-blue-600 text-white px-4 py-2 rounded">Kirim</button>
+    </form>
+  );
 }
 
 function UserAuth() {
-  return <div>[Autentikasi Pengguna: Login/Daftar]</div>;
+  return <div className="hidden">[Autentikasi Pengguna: Login/Daftar]</div>;
 }
 
 function StudentDashboard() {
-  return <div>[Dashboard Siswa: Kursus Saya, Kemajuan]</div>;
+  return <div className="hidden">[Dashboard Siswa: Kursus Saya, Kemajuan]</div>;
 }
 
 function InteractivePreview() {
-  return <div>[Pratinjau Kursus Interaktif]</div>;
+  return <div className="hidden">[Pratinjau Kursus Interaktif]</div>;
 }
 
 function PaymentIntegration() {
-  return <div>[Integrasi Pembayaran]</div>;
+  return <div className="hidden">[Integrasi Pembayaran]</div>;
 }
 
 function LiveChatSupport() {
-  return <div>[Dukungan Obrolan Langsung]</div>;
+  return <div className="hidden">[Dukungan Obrolan Langsung]</div>;
 }
 
 function CourseReview() {
-  return <div>[Sistem Ulasan Kursus]</div>;
+  return <div className="hidden">[Sistem Ulasan Kursus]</div>;
 }
 
 function InstructorProfile() {
-  return <div>[Profil dan Kredensial Instruktur]</div>;
+  return <div className="hidden">[Profil dan Kredensial Instruktur]</div>;
 }
 
 function SearchFilter() {
-  return <div>[Fitur Pencarian dan Filter]</div>;
+  return <div className="hidden">[Fitur Pencarian dan Filter]</div>;
 }
 
 function CalendarIntegration() {
-  return <div>[Integrasi Kalender untuk Jadwal Live]</div>;
+  return <div className="hidden">[Integrasi Kalender untuk Jadwal Live]</div>;
 }
