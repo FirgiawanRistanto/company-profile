@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-import { Briefcase, Users, BookOpen, FileText } from "lucide-react";
+import { Users, BookOpen } from "lucide-react";
 import TeamShowcase from "./components/TeamShowcase";
 import CourseFilter from "./components/CourseFilter";
 import CourseList from "./components/CourseList";
